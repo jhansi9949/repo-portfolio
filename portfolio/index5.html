@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio website</title>
+    <link rel="stylesheet" href="style5.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="img/logo6.jpg" class="logo">
+          <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">contact</a></li>
+          </ul>
+        </nav>
+        
+          <div class="header-text">
+            
+          <p>Hello Everyone!</p> 
+          <h1>A <span>WEB development</span><br>Learner</h1>
+          </div>
+      </div>
+    </div>
+    <!--------------------about---------------------->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="img/rashi5.jpg"></img>
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>hello everyone!My name is jhansi from andhra pradesh
+              and I'm pursing btech.</p>
+              <div  class="tab-titles">
+                <p class="tab-links" onclick="opentab('programming languages')">programming languages</p>
+                <p class="tab-links" onclick="opentab('script languages')">script languages</p>
+              </div>
+              <div class="tab-contents active-tab" id="programming languages">
+                <ul>
+                  <li><span>C language</span><br>general-purpose programmin language</li>
+                  <li><span>java</span><br>object oriented programmin language</li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="script languages">
+                <ul>
+                  <li><span>html</span><br>structure of the webpage</li>
+                  <li><span>css</span><br>style of the webpage</li>
+                  <li><span>javascript</span><br>behavior of the webpage</li>
+                </ul>
+              </div>
+              <a href="img/my cv.docx"  class="btn btn2">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!----------------------education------------------->
+    <div id="education">
+      <div class="container">
+        <div class="sub-title">Education</div>
+        <div class="education-list">
+          <div>
+            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+            <h2>BTECH</h2>
+            <P>CSE Department <br> JNTUA UNIVERSITY<br>Percentage:80%</P>
+          </div>
+          <div>
+            <i class="fa fa-book" aria-hidden="true"></i>
+            <h2>INTERMEDIATE</h2>
+            <P>MPC <br>Secondary education<br>Percentage:90%</P>
+          </div>
+          <div>
+            <i class="fa fa-book" aria-hidden="true"></i>
+            <h2>SSC</h2>
+            <P>Z.P.H(Girls) school<br>Percentage:92%</P>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!----------------------skills-------------------->
+    <div id="skills">
+      <div class="container">
+        <h1 class="sub-title"> My Skills</h1>
+        <div class="skills-list">
+          <div class="skills">
+            <h1><b>problem solving</b></h1>
+            <p>My problem-solving capabilities<br> have enabled me to solve difficult<br>  issues in the past,using creative <br> and innovative solutions</p>
+          </div>
+          <div class="skills">
+            <h1><b>Technical skill</b></h1>
+            <p>I am knowledgeable in several<br>  technical areas such as<br>  programming languages that <br> support my ambition in my field</p>
+          </div>
+          <div class="skills">
+           <h1><b>Organization</b></h1>
+            <p>My proactivity allows me to plan<br>  ahead and prioritize tasks <br> according to objectives and <br> different deadlines</p>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+    
+     <!---------------------contact me-------------------->
+    <div id="contact">
+      <div class="container">
+        <h1>Contact Me</h1>
+        <div class="contact">
+          <form>
+            <input type="text" name=" Full Name" placeholder="Enter Your Full Name" required>
+            <input type="email" name="email" placeholder="Enter Your email" required>
+            <input type="number" name="number" placeholder="Enter Your number" required>
+            <textarea name="message" rows="6" placeholder="Enter Your message"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+        </div>
+      </div>
+      
+     
+      
+      <div class="copyright">
+        
+        <p>copyright @ Jhansi. Made with  <i class="fa fa-heart" aria-hidden="true"></i></p>
+      </div>
+    </div>
+    <script>
+      var tablinks=document.getElementsByClassName("tab-links");
+      var tabcontents=document.getElementsByClassName("tab-contents");
+      function opentab(tabname){
+        for(tablink of tablinks){
+          tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+
+    </script>
+  </body>
+  
+</html>
